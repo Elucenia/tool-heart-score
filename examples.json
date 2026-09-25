@@ -1,0 +1,74 @@
+[
+  {
+    "label": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+    "input": {
+      "h": "2",
+      "e": "2",
+      "a": "2",
+      "r": "2",
+      "t": "2"
+    },
+    "expected": {
+      "raw": {
+        "score": 10
+      },
+      "level": "high"
+    },
+    "originalInput": {
+      "h": "2",
+      "e": "2",
+      "a": "2",
+      "r": "2",
+      "t": "2"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+    "input": {
+      "h": "1",
+      "e": "1",
+      "a": "1",
+      "r": "0",
+      "t": "0"
+    },
+    "expected": {
+      "raw": {
+        "score": 3
+      },
+      "level": "low"
+    },
+    "originalInput": {
+      "h": "1",
+      "e": "1",
+      "a": "1",
+      "r": "0",
+      "t": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+    "input": {
+      "h": "2",
+      "e": "1",
+      "a": "1",
+      "r": "1",
+      "t": "0"
+    },
+    "expected": {
+      "raw": {
+        "score": 5
+      },
+      "level": "mid"
+    },
+    "originalInput": {
+      "h": "2",
+      "e": "1",
+      "a": "1",
+      "r": "1",
+      "t": "0"
+    },
+    "expandedZeroOptions": []
+  }
+]

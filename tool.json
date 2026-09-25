@@ -1,0 +1,203 @@
+{
+  "tool": {
+    "id": "heart-score",
+    "title": "Escore HEART",
+    "short": "Dor torácica na emergência",
+    "spec": [
+      "cardiologia",
+      "medicina-de-emergencia"
+    ],
+    "tier": 1,
+    "desc": "Calculadora do escore HEART para dor torácica na emergência: risco de eventos cardíacos maiores em 6 semanas e orientação de alta ou investigação.",
+    "lead": "Estima o risco de eventos cardíacos maiores (MACE) em 6 semanas em pacientes com dor torácica na emergência.",
+    "fields": [
+      [
+        "h",
+        "História",
+        "radio",
+        {
+          "opts": {
+            "0": "Pouco suspeita",
+            "1": "Moderadamente suspeita",
+            "2": "Muito suspeita"
+          }
+        }
+      ],
+      [
+        "e",
+        "ECG",
+        "radio",
+        {
+          "opts": {
+            "0": "Normal",
+            "1": "Alteração de repolarização inespecífica",
+            "2": "Infradesnível do ST significativo"
+          }
+        }
+      ],
+      [
+        "a",
+        "Idade",
+        "radio",
+        {
+          "opts": {
+            "0": "&lt; 45 anos",
+            "1": "45 a 64 anos",
+            "2": "≥ 65 anos"
+          }
+        }
+      ],
+      [
+        "r",
+        "Fatores de risco",
+        "radio",
+        {
+          "opts": {
+            "0": "Nenhum",
+            "1": "1 ou 2",
+            "2": "≥ 3 ou doença aterosclerótica conhecida"
+          }
+        }
+      ],
+      [
+        "t",
+        "Troponina",
+        "radio",
+        {
+          "opts": {
+            "0": "≤ limite normal",
+            "1": "1 a 3× o limite",
+            "2": "&gt; 3× o limite"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>Soma de 0 a 2 pontos em cada item: <strong>H</strong>istória, <strong>E</strong>CG, <strong>A</strong>ge (idade), <strong>R</strong>isk factors e <strong>T</strong>roponina. Total de 0 a 10.</p><p>Fatores de risco: hipertensão, dislipidemia, diabetes, obesidade (IMC &gt; 30), tabagismo atual ou recente, história familiar de DAC precoce.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Risco",
+        "MACE em 6 semanas"
+      ],
+      [
+        "0 a 3",
+        "Baixo",
+        "1,7%"
+      ],
+      [
+        "4 a 6",
+        "Moderado",
+        "16,6%"
+      ],
+      [
+        "7 a 10",
+        "Alto",
+        "50,1%"
+      ]
+    ],
+    "tips": [
+      "HEART ≤ 3 com troponinas seriadas negativas permite alta precoce com seguimento ambulatorial.",
+      "Com 4 a 6 pontos, observe, repita troponina e considere teste funcional ou angiotomografia antes da alta.",
+      "≥ 7 pontos: estratégia invasiva precoce, como síndrome coronária aguda de alto risco.",
+      "O escore não substitui o julgamento clínico: ECG com supradesnível do ST ou instabilidade hemodinâmica mudam a conduta de imediato."
+    ],
+    "sources": [
+      [
+        "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J, 2008.",
+        "https://doi.org/10.1007/BF03086144"
+      ],
+      [
+        "Backus BE et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol, 2013.",
+        "https://doi.org/10.1016/j.ijcard.2013.01.255"
+      ]
+    ],
+    "cases": [
+      [
+        "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        {
+          "h": "2",
+          "e": "2",
+          "a": "2",
+          "r": "2",
+          "t": "2"
+        },
+        {
+          "raw": {
+            "score": 10
+          },
+          "level": "high"
+        }
+      ],
+      [
+        "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        {
+          "h": "1",
+          "e": "1",
+          "a": "1",
+          "r": "0",
+          "t": "0"
+        },
+        {
+          "raw": {
+            "score": 3
+          },
+          "level": "low"
+        }
+      ],
+      [
+        "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        {
+          "h": "2",
+          "e": "1",
+          "a": "1",
+          "r": "1",
+          "t": "0"
+        },
+        {
+          "raw": {
+            "score": 5
+          },
+          "level": "mid"
+        }
+      ]
+    ],
+    "batch": "cardiologia",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/cardiologia.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "id": "heart-score",
+    "status": "needs-review",
+    "reason": "A pontuação não reproduz um protocolo completo de dor torácica. O ZIP emite alta ou estratégia invasiva a partir de grupos de escore. A via ACC integra ECG, troponina seriada, ensaio, tempo e seguimento; ocultar essas condutas e as taxas antigas como risco individual.",
+    "sourceUrl": "https://www.jacc.org/doi/10.1016/j.jacc.2022.08.750",
+    "sourceTitle": "ACC — Evaluation and Disposition of Acute Chest Pain in the Emergency Department",
+    "sourceDate": "2022",
+    "publisherRegion": "Estados Unidos / ACC",
+    "checkedAt": "2026-09-25",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/cardiologia.php",
+    "sha256": "ed536451dd02922a7f840f2c9ce575be004cddb227f60426b7a52cf1b0e94ec0",
+    "bytes": 61303
+  },
+  "clinicalValidation": "not-performed"
+}

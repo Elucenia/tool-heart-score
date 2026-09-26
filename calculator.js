@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-heart-score · Elucenia · https://github.com/Elucenia/tool-heart-score
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"heart-score","title":"Escore HEART","fields":[["h","História","radio",{"opts":{"0":"Pouco suspeita","1":"Moderadamente suspeita","2":"Muito suspeita"}}],["e","ECG","radio",{"opts":{"0":"Normal","1":"Alteração de repolarização inespecífica","2":"Infradesnível do ST significativo"}}],["a","Idade","radio",{"opts":{"0":"&lt; 45 anos","1":"45 a 64 anos","2":"≥ 65 anos"}}],["r","Fatores de risco","radio",{"opts":{"0":"Nenhum","1":"1 ou 2","2":"≥ 3 ou doença aterosclerótica conhecida"}}],["t","Troponina","radio",{"opts":{"0":"≤ limite normal","1":"1 a 3× o limite","2":"&gt; 3× o limite"}}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

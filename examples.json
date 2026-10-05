@@ -1,6 +1,16 @@
 [
   {
-    "label": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+    "id": "heart-score",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+    "originalInput": {
+      "h": "2",
+      "e": "2",
+      "a": "2",
+      "r": "2",
+      "t": "2"
+    },
     "input": {
       "h": "2",
       "e": "2",
@@ -14,17 +24,37 @@
       },
       "level": "high"
     },
-    "originalInput": {
-      "h": "2",
-      "e": "2",
-      "a": "2",
-      "r": "2",
-      "t": "2"
+    "recordedResult": {
+      "main": [
+        "10",
+        "pontos"
+      ],
+      "label": "Escore HEART",
+      "raw": {
+        "score": 10
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+    "id": "heart-score",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+    "originalInput": {
+      "h": "1",
+      "e": "1",
+      "a": "1",
+      "r": "0",
+      "t": "0"
+    },
     "input": {
       "h": "1",
       "e": "1",
@@ -38,17 +68,37 @@
       },
       "level": "low"
     },
-    "originalInput": {
-      "h": "1",
-      "e": "1",
-      "a": "1",
-      "r": "0",
-      "t": "0"
+    "recordedResult": {
+      "main": [
+        "3",
+        "pontos"
+      ],
+      "label": "Escore HEART",
+      "raw": {
+        "score": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+    "id": "heart-score",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+    "originalInput": {
+      "h": "2",
+      "e": "1",
+      "a": "1",
+      "r": "1",
+      "t": "0"
+    },
     "input": {
       "h": "2",
       "e": "1",
@@ -62,13 +112,23 @@
       },
       "level": "mid"
     },
-    "originalInput": {
-      "h": "2",
-      "e": "1",
-      "a": "1",
-      "r": "1",
-      "t": "0"
+    "recordedResult": {
+      "main": [
+        "5",
+        "pontos"
+      ],
+      "label": "Escore HEART",
+      "raw": {
+        "score": 5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

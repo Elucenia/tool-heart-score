@@ -3,13 +3,13 @@
     "id": "heart-score",
     "title": "Escore HEART",
     "short": "Dor torácica na emergência",
+    "desc": "Calculadora do escore HEART para dor torácica na emergência: risco de eventos cardíacos maiores em 6 semanas e orientação de alta ou investigação.",
+    "lead": "Estima o risco de eventos cardíacos maiores (MACE) em 6 semanas em pacientes com dor torácica na emergência.",
+    "kind": "Calculadora",
     "spec": [
       "cardiologia",
       "medicina-de-emergencia"
     ],
-    "tier": 1,
-    "desc": "Calculadora do escore HEART para dor torácica na emergência: risco de eventos cardíacos maiores em 6 semanas e orientação de alta ou investigação.",
-    "lead": "Estima o risco de eventos cardíacos maiores (MACE) em 6 semanas em pacientes com dor torácica na emergência.",
     "fields": [
       [
         "h",
@@ -41,8 +41,8 @@
         "radio",
         {
           "opts": {
-            "0": "&lt; 45 anos",
-            "1": "45 a 64 anos",
+            "0": "≤ 45 anos",
+            "1": "&gt; 45 e &lt; 65 anos",
             "2": "≥ 65 anos"
           }
         }
@@ -66,41 +66,13 @@
         {
           "opts": {
             "0": "≤ limite normal",
-            "1": "1 a 3× o limite",
-            "2": "&gt; 3× o limite"
+            "1": "&gt; 1× e &lt; 3× o limite normal",
+            "2": "≥ 3× o limite normal"
           }
         }
       ]
     ],
     "formula": "<p>Soma de 0 a 2 pontos em cada item: <strong>H</strong>istória, <strong>E</strong>CG, <strong>A</strong>ge (idade), <strong>R</strong>isk factors e <strong>T</strong>roponina. Total de 0 a 10.</p><p>Fatores de risco: hipertensão, dislipidemia, diabetes, obesidade (IMC &gt; 30), tabagismo atual ou recente, história familiar de DAC precoce.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Risco",
-        "MACE em 6 semanas"
-      ],
-      [
-        "0 a 3",
-        "Baixo",
-        "1,7%"
-      ],
-      [
-        "4 a 6",
-        "Moderado",
-        "16,6%"
-      ],
-      [
-        "7 a 10",
-        "Alto",
-        "50,1%"
-      ]
-    ],
-    "tips": [
-      "HEART ≤ 3 com troponinas seriadas negativas permite alta precoce com seguimento ambulatorial.",
-      "Com 4 a 6 pontos, observe, repita troponina e considere teste funcional ou angiotomografia antes da alta.",
-      "≥ 7 pontos: estratégia invasiva precoce, como síndrome coronária aguda de alto risco.",
-      "O escore não substitui o julgamento clínico: ECG com supradesnível do ST ou instabilidade hemodinâmica mudam a conduta de imediato."
-    ],
     "sources": [
       [
         "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J, 2008.",
@@ -161,9 +133,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -172,23 +141,640 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T16:56:01.150Z",
+      "total": 243,
+      "passed": 243,
+      "sourceRowCount": 243,
+      "uniqueApiInputCount": 243,
+      "sourceContextCount": 243,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "f468b11c57654879a27b3c3023683a744d9b404cfc32070dddc75f06e8e1a4c9",
+        "total": 243,
+        "bankRowCount": 243,
+        "uniqueApiInputCount": 243,
+        "sourceContextCount": 243,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+            "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+          },
+          {
+            "file": "reports/review-20261003/eight-risk-independent-expectations-final26.json",
+            "sha256": "f5e7d0e09fb4dadaa01dd489cbca1ad3ee8e847771b8409947f3fc43ad7f4a82"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+          "sha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce"
+        },
+        "packagingRequirement": "Copy this score-only complete bank into fresh frozen26 packages only after metadata/source composition and independent peer.",
+        "previousSha256": "d22d015482531ff80f85bcec0ad04a2a09b2294b7b5fa5720717bce111e0fe9a",
+        "appliedMetadataRebind": {
+          "file": "reports/review-20261003/heart-source-bank-rebind-peer-final26.json",
+          "sha256": "d51380f414f9c14038d79981d3f55b15b71fa17d8bc71cea5098c93adad1fa0e",
+          "scope": "Replayed unchanged243 selected point input/expected objects against amended2013 metadata; historical obtained code bindings preserved separately."
+        }
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 243,
+        "uniqueApiInputs": 243,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+          "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+        }
+      },
+      "scope": "Exact weighted integer sum of 243 exhaustive represented caller-selected point/binary tuples for heart-score. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Existing2008/2013 boundary/edition hybrid requires the separately owned source-label patch and peer; this arithmetic metadata does not certify it.",
+      "sources": [
+        {
+          "id": "heart-score",
+          "edition": "Six2008 original versus Backus2013 validation: table boundary differences preserved",
+          "url": "https://umem.org/files/uploads/1312081419_Neth_Heart_J_2008_Six.pdf",
+          "doi": "10.1007/BF03086144",
+          "access": "Both original2008 and validation2013 PDFs downloaded from university educational mirror; originalMethods/TroponinI/Table1 and2013Methods/Table1 visually inspected.",
+          "readScope": [
+            "SixPDFp2 all five predictor definitions",
+            "SixPDFp3 Table1,printed193",
+            "SixPDFp5 distributiongroups",
+            "BackusPDFp2 Table1/Methods,printed2154"
+          ],
+          "notVerified": [
+            "Assay-specific raw troponin or patient history classification",
+            "Choosing between source boundary variants",
+            "Prediction/serialHEARTPathway/discharge management"
+          ],
+          "sourceComponent": "Selected integer point sum only; detailed clinical cohort/band facts remain in the frozen original source review."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+      "evidenceSha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce",
+      "originalEvidence": {
+        "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+        "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred.",
+        "recordedAt": "2026-10-04T18:58:10.440Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred."
+        },
+        "peer": {
+          "file": "reports/review-20261003/eight-point-total-source-evidence-independent-peer-final26-r2.json",
+          "sha256": "6d1b854d021eef9f0f5916ed7f81a70dc8359dae5824f2508c70d29b33732d5c",
+          "summary": {
+            "checks": 8278,
+            "failed": 0,
+            "methods": 8,
+            "sourceRows": 1132,
+            "uniqueInputs": 1132,
+            "freshExecutions": 3396,
+            "helperAssertions": 6888,
+            "metadataMethods": 128,
+            "metadataRows": 53752,
+            "metadataUnique": 53680,
+            "metadataRepeats": 72
+          },
+          "scope": "Root independent peer of exact46 preimages/afterimages; independently frozen1132 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all18 previous scopes;24 fresh Node helper executions replay all8 selected-point components without clinical approval."
+        },
+        "application": {
+          "file": "reports/review-20261003/eight-point-total-source-evidence-application-final26.json",
+          "sha256": "ff192c36cc1774e583fe2b8bcdd2e10b275e774ff633d180534b012cfe5b87e3"
+        },
+        "reviewedBankScope": "Exact weighted integer sum of 243 exhaustive represented caller-selected point/binary tuples for heart-score. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Existing2008/2013 boundary/edition hybrid requires the separately owned source-label patch and peer; this arithmetic metadata does not certify it.",
+        "currentBinding": {
+          "source26BankSha256": "61210c69599663587562734479a3021105e7ecf71a4b2b666783787b04146940",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/heart-score/calculator.js",
+              "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/heart-score/calculator.js",
+              "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/heart-score/calculator.js",
+              "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+            }
+          ],
+          "subsequentReviewedRebinds": [
+            {
+              "file": "reports/review-20261003/heart-source-bank-rebind-peer-final26.json",
+              "sha256": "d51380f414f9c14038d79981d3f55b15b71fa17d8bc71cea5098c93adad1fa0e",
+              "scope": "Replayed unchanged243 selected point input/expected objects against amended2013 metadata; historical obtained code bindings preserved separately."
+            }
+          ]
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 729,
+      "actualVmExecutions": 729,
+      "implementations": [
+        {
+          "id": "heart-score",
+          "app": "website",
+          "file": "apps/website/private/tool-code/heart-score/calculator.js",
+          "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+        },
+        {
+          "id": "heart-score",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/heart-score/calculator.js",
+          "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+        },
+        {
+          "id": "heart-score",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/heart-score/calculator.js",
+          "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+        }
+      ],
+      "qualifications": [
+        "Exact weighted integer sum of 243 exhaustive represented caller-selected point/binary tuples for heart-score. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Existing2008/2013 boundary/edition hybrid requires the separately owned source-label patch and peer; this arithmetic metadata does not certify it.",
+        "All862 historical fixtures and every field/formula/version/approval unchanged by this candidate. Original source/clinical failures and edition warnings are not overwritten.",
+        "Four inline metadata rows are only a subset of the complete hashed downloadable bank. Independent professional/clinical/rights and full-method approvals are not performed."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "previousImplementationBindings": [
+        {
+          "id": "heart-score",
+          "app": "website",
+          "file": "apps/website/private/tool-code/heart-score/calculator.js",
+          "sha256": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7"
+        },
+        {
+          "id": "heart-score",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/heart-score/calculator.js",
+          "sha256": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7"
+        },
+        {
+          "id": "heart-score",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/heart-score/calculator.js",
+          "sha256": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7"
+        }
+      ],
+      "appliedMetadataRebind": {
+        "file": "reports/review-20261003/heart-source-bank-rebind-peer-final26.json",
+        "sha256": "d51380f414f9c14038d79981d3f55b15b71fa17d8bc71cea5098c93adad1fa0e",
+        "scope": "Replayed unchanged243 selected point input/expected objects against amended2013 metadata; historical obtained code bindings preserved separately."
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "HEART/Backus 2013: 5 componentes de 0–2 pontos, total 0–10; idade ≤45, >45 e <65, ≥65 anos; troponina ≤LSN, >1×LSN e <3×LSN, ≥3×LSN; sem HEART Pathway seriado",
+    "implementationVersion": "heart-score@native-2026-10-04+0302007791db",
+    "currentMethodSource": "https://doi.org/10.1016/j.ijcard.2013.01.255",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Soma de 0 a 2 pontos em cada item: H istória, E CG, A ge (idade), R isk factors e T roponina. Total de 0 a 10. Fatores de risco: hipertensão, dislipidemia, diabetes, obesidade (IMC > 30), tabagismo atual ou recente, história familiar de DAC precoce.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "h",
+            "label": "História",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Pouco suspeita",
+              "1": "Moderadamente suspeita",
+              "2": "Muito suspeita"
+            }
+          },
+          {
+            "key": "e",
+            "label": "ECG",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Normal",
+              "1": "Alteração de repolarização inespecífica",
+              "2": "Infradesnível do ST significativo"
+            }
+          },
+          {
+            "key": "a",
+            "label": "Idade",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≤ 45 anos",
+              "1": "&gt; 45 e &lt; 65 anos",
+              "2": "≥ 65 anos"
+            }
+          },
+          {
+            "key": "r",
+            "label": "Fatores de risco",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Nenhum",
+              "1": "1 ou 2",
+              "2": "≥ 3 ou doença aterosclerótica conhecida"
+            }
+          },
+          {
+            "key": "t",
+            "label": "Troponina",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≤ limite normal",
+              "1": "&gt; 1× e &lt; 3× o limite normal",
+              "2": "≥ 3× o limite normal"
+            }
+          }
+        ],
+        "hash": "e804a71efb3fb778573f4ea3edff8bd876b1b6c2385318fc43cc839f82026708"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J, 2008.",
+          "url": "https://doi.org/10.1007/BF03086144",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Chest pain in the emergency room: value of the HEART score.",
+            "year": "2008",
+            "firstPublicationDate": "2008-06-01",
+            "doi": "10.1007/bf03086144",
+            "pmid": "18665203",
+            "pmcid": "PMC2442661",
+            "journal": "Netherlands heart journal : monthly journal of the Netherlands Society of Cardiology and the Netherlands Heart Foundation",
+            "authors": "Six AJ, Backus BE, Kelder JC."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2442661/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "202238386341b70c52fa228fb44cd1fbfe03f8ce0dbce639f0ac9382a4c12524",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Backus BE et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol, 2013.",
+          "url": "https://doi.org/10.1016/j.ijcard.2013.01.255",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "A prospective validation of the HEART score for chest pain patients at the emergency department.",
+            "year": "2013",
+            "firstPublicationDate": "2013-03-07",
+            "doi": "10.1016/j.ijcard.2013.01.255",
+            "pmid": "23465250",
+            "journal": "International journal of cardiology",
+            "authors": "Backus BE, Six AJ, Kelder JC, Bosschaert MA, Mast EG, Mosterd A, Veldkamp RF, Wardeh AJ, Tio R, Braam R, Monnink SH, van Tooren R, Mast TP, van den Akker F, Cramer MJ, Poldervaart JM, Hoes AW, Doevendans PA."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/23465250/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "d4ce612aa4ce4d3bd07a04715161c33d85feabfa4686df75a5baa18dca9d0574",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T16:56:01.150Z",
+        "total": 243,
+        "passed": 243,
+        "sourceRowCount": 243,
+        "uniqueApiInputCount": 243,
+        "sourceContextCount": 243,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "f468b11c57654879a27b3c3023683a744d9b404cfc32070dddc75f06e8e1a4c9",
+          "total": 243,
+          "bankRowCount": 243,
+          "uniqueApiInputCount": 243,
+          "sourceContextCount": 243,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+              "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+            },
+            {
+              "file": "reports/review-20261003/eight-risk-independent-expectations-final26.json",
+              "sha256": "f5e7d0e09fb4dadaa01dd489cbca1ad3ee8e847771b8409947f3fc43ad7f4a82"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+            "sha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce"
+          },
+          "packagingRequirement": "Copy this score-only complete bank into fresh frozen26 packages only after metadata/source composition and independent peer.",
+          "previousSha256": "d22d015482531ff80f85bcec0ad04a2a09b2294b7b5fa5720717bce111e0fe9a",
+          "appliedMetadataRebind": {
+            "file": "reports/review-20261003/heart-source-bank-rebind-peer-final26.json",
+            "sha256": "d51380f414f9c14038d79981d3f55b15b71fa17d8bc71cea5098c93adad1fa0e",
+            "scope": "Replayed unchanged243 selected point input/expected objects against amended2013 metadata; historical obtained code bindings preserved separately."
+          }
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 243,
+          "uniqueApiInputs": 243,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/eight-point-total-independent-expectations-publication-final26.json",
+            "sha256": "8cf68c5141b705cb0ac5cf5f1e06703b9bd76824beea212df5d343f8fd688c58"
+          }
+        },
+        "scope": "Exact weighted integer sum of 243 exhaustive represented caller-selected point/binary tuples for heart-score. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Existing2008/2013 boundary/edition hybrid requires the separately owned source-label patch and peer; this arithmetic metadata does not certify it.",
+        "sources": [
+          {
+            "id": "heart-score",
+            "edition": "Six2008 original versus Backus2013 validation: table boundary differences preserved",
+            "url": "https://umem.org/files/uploads/1312081419_Neth_Heart_J_2008_Six.pdf",
+            "doi": "10.1007/BF03086144",
+            "access": "Both original2008 and validation2013 PDFs downloaded from university educational mirror; originalMethods/TroponinI/Table1 and2013Methods/Table1 visually inspected.",
+            "readScope": [
+              "SixPDFp2 all five predictor definitions",
+              "SixPDFp3 Table1,printed193",
+              "SixPDFp5 distributiongroups",
+              "BackusPDFp2 Table1/Methods,printed2154"
+            ],
+            "notVerified": [
+              "Assay-specific raw troponin or patient history classification",
+              "Choosing between source boundary variants",
+              "Prediction/serialHEARTPathway/discharge management"
+            ],
+            "sourceComponent": "Selected integer point sum only; detailed clinical cohort/band facts remain in the frozen original source review."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/eight-point-total-independent-check-publication-final26-r2.json",
+        "evidenceSha256": "f22416952f317ef50932276df98da8fd5ffe42b9130768b858ef17eaf21d38ce",
+        "originalEvidence": {
+          "file": "reports/review-20261003/eight-risk-independent-source-check-final26.json",
+          "sha256": "b816fcbdbc88a75d30dba462f1d7a1ecfacb49b3d5487709ee9d1bd470c6d832"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred.",
+          "recordedAt": "2026-10-04T18:58:10.440Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Metadata/bank/helper peer before root composition and application; clinical approval not inferred."
+          },
+          "peer": {
+            "file": "reports/review-20261003/eight-point-total-source-evidence-independent-peer-final26-r2.json",
+            "sha256": "6d1b854d021eef9f0f5916ed7f81a70dc8359dae5824f2508c70d29b33732d5c",
+            "summary": {
+              "checks": 8278,
+              "failed": 0,
+              "methods": 8,
+              "sourceRows": 1132,
+              "uniqueInputs": 1132,
+              "freshExecutions": 3396,
+              "helperAssertions": 6888,
+              "metadataMethods": 128,
+              "metadataRows": 53752,
+              "metadataUnique": 53680,
+              "metadataRepeats": 72
+            },
+            "scope": "Root independent peer of exact46 preimages/afterimages; independently frozen1132 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all18 previous scopes;24 fresh Node helper executions replay all8 selected-point components without clinical approval."
+          },
+          "application": {
+            "file": "reports/review-20261003/eight-point-total-source-evidence-application-final26.json",
+            "sha256": "ff192c36cc1774e583fe2b8bcdd2e10b275e774ff633d180534b012cfe5b87e3"
+          },
+          "reviewedBankScope": "Exact weighted integer sum of 243 exhaustive represented caller-selected point/binary tuples for heart-score. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Existing2008/2013 boundary/edition hybrid requires the separately owned source-label patch and peer; this arithmetic metadata does not certify it.",
+          "currentBinding": {
+            "source26BankSha256": "61210c69599663587562734479a3021105e7ecf71a4b2b666783787b04146940",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/heart-score/calculator.js",
+                "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/heart-score/calculator.js",
+                "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/heart-score/calculator.js",
+                "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+              }
+            ],
+            "subsequentReviewedRebinds": [
+              {
+                "file": "reports/review-20261003/heart-source-bank-rebind-peer-final26.json",
+                "sha256": "d51380f414f9c14038d79981d3f55b15b71fa17d8bc71cea5098c93adad1fa0e",
+                "scope": "Replayed unchanged243 selected point input/expected objects against amended2013 metadata; historical obtained code bindings preserved separately."
+              }
+            ]
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 729,
+        "actualVmExecutions": 729,
+        "implementations": [
+          {
+            "id": "heart-score",
+            "app": "website",
+            "file": "apps/website/private/tool-code/heart-score/calculator.js",
+            "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+          },
+          {
+            "id": "heart-score",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/heart-score/calculator.js",
+            "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+          },
+          {
+            "id": "heart-score",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/heart-score/calculator.js",
+            "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+          }
+        ],
+        "qualifications": [
+          "Exact weighted integer sum of 243 exhaustive represented caller-selected point/binary tuples for heart-score. Raw score only; clinical labels/cutoffs/bands, patient-factor assessment, diagnostic/treatment decisions, risk and cohort probabilities, predictive validity and complete source conformance excluded. Existing2008/2013 boundary/edition hybrid requires the separately owned source-label patch and peer; this arithmetic metadata does not certify it.",
+          "All862 historical fixtures and every field/formula/version/approval unchanged by this candidate. Original source/clinical failures and edition warnings are not overwritten.",
+          "Four inline metadata rows are only a subset of the complete hashed downloadable bank. Independent professional/clinical/rights and full-method approvals are not performed."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "previousImplementationBindings": [
+          {
+            "id": "heart-score",
+            "app": "website",
+            "file": "apps/website/private/tool-code/heart-score/calculator.js",
+            "sha256": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7"
+          },
+          {
+            "id": "heart-score",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/heart-score/calculator.js",
+            "sha256": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7"
+          },
+          {
+            "id": "heart-score",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/heart-score/calculator.js",
+            "sha256": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7"
+          }
+        ],
+        "appliedMetadataRebind": {
+          "file": "reports/review-20261003/heart-source-bank-rebind-peer-final26.json",
+          "sha256": "d51380f414f9c14038d79981d3f55b15b71fa17d8bc71cea5098c93adad1fa0e",
+          "scope": "Replayed unchanged243 selected point input/expected objects against amended2013 metadata; historical obtained code bindings preserved separately."
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3",
+      "previousInputContract": {
+        "fields": [
+          {
+            "key": "h",
+            "label": "História",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Pouco suspeita",
+              "1": "Moderadamente suspeita",
+              "2": "Muito suspeita"
+            }
+          },
+          {
+            "key": "e",
+            "label": "ECG",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Normal",
+              "1": "Alteração de repolarização inespecífica",
+              "2": "Infradesnível do ST significativo"
+            }
+          },
+          {
+            "key": "a",
+            "label": "Idade",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "&lt; 45 anos",
+              "1": "45 a 64 anos",
+              "2": "≥ 65 anos"
+            }
+          },
+          {
+            "key": "r",
+            "label": "Fatores de risco",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Nenhum",
+              "1": "1 ou 2",
+              "2": "≥ 3 ou doença aterosclerótica conhecida"
+            }
+          },
+          {
+            "key": "t",
+            "label": "Troponina",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≤ limite normal",
+              "1": "1 a 3× o limite",
+              "2": "&gt; 3× o limite"
+            }
+          }
+        ],
+        "hash": "9e4be0a060c47c4f3b17a7d1e1b4c2f93c5d4612f76839a28687285a7235cf59"
+      },
+      "previousImplementationHash": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7",
+      "boundaryEditionEvidence": {
+        "status": "table-bracket-and-edition-amendment-only",
+        "edition": "Backus2013 Table1, PDFp2/printed2154",
+        "primaryUrl": "https://doi.org/10.1016/j.ijcard.2013.01.255",
+        "pdfSha256": "2bf517436e396f8b09154787fd4fe22247d90142188eb8b80cfc96d07075132e",
+        "reviewReceipt": "reports/review-20261003/eight-risk-source-input-contract-final26.json",
+        "reviewSha256": "9be3aedf12665c5fb2c612d64e92907d031a0f9ef96be312f5325ddee817f294",
+        "previousMethodVersion": "HEART/Six 2008:5 fatores 0–2, total 0–10; sem HEARTPathway serial",
+        "previousCurrentMethodSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2442661/",
+        "original2008Retained": true,
+        "clinicalEligibilityReviewed": false,
+        "fullMethodConformanceReviewed": false,
+        "clinicalApproval": "not-performed",
+        "professionalTranslationApproval": "not-performed"
+      },
+      "metadataAmendment": {
+        "receipt": "reports/review-20261003/heart-2013-boundary-candidate-final26.json",
+        "scope": "Only four displayed age/troponin option brackets and chosen edition; executable point calculation unchanged.",
+        "previousImplementationHash": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7",
+        "calculationTextSha256": "eed1584fcba2e8dba7f6002653263b5079bbe22edf2a8e0102caf662ea59e1f0"
+      }
+    },
+    "limits": "O HEART original foi estudado na emergência em pessoas com dor torácica e suspeita de síndrome coronariana sem supradesnível. Baixo escore não significa risco zero, e a soma original não é equivalente ao HEART Pathway com avaliação seriada. Segurança de alta, momento das troponinas e exclusões exigem o protocolo correspondente.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.938Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não explicita todas as exclusões, janela de seis semanas do lead ou dosagens seriadas. HEART Pathway é variante distinta."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
+    },
+    "previousImplementationVersion": "heart-score@native-2026-10-03+f39832400d3b"
+  },
+  "currentSource": {
+    "file": "apps/website/private/tool-code/heart-score/calculator.js",
+    "bytes": 5198,
+    "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+  },
+  "sourceToolSha256": "7aa3a9548e33f2ac21c837f9a73622323bbd687f3ae41549b2c5117fb5a28306",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "f17383423e89ce55d874ec684c496ac40b02d30a994b0cfcc97870a273763f5a",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "f17383423e89ce55d874ec684c496ac40b02d30a994b0cfcc97870a273763f5a",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
     }
-  },
-  "review": {
-    "id": "heart-score",
-    "status": "needs-review",
-    "reason": "A pontuação não reproduz um protocolo completo de dor torácica. O ZIP emite alta ou estratégia invasiva a partir de grupos de escore. A via ACC integra ECG, troponina seriada, ensaio, tempo e seguimento; ocultar essas condutas e as taxas antigas como risco individual.",
-    "sourceUrl": "https://www.jacc.org/doi/10.1016/j.jacc.2022.08.750",
-    "sourceTitle": "ACC — Evaluation and Disposition of Acute Chest Pain in the Emergency Department",
-    "sourceDate": "2022",
-    "publisherRegion": "Estados Unidos / ACC",
-    "checkedAt": "2026-09-25",
-    "clinicalValidation": "not-performed"
-  },
-  "clinicalValidation": "not-performed"
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

@@ -1,0 +1,97 @@
+<!-- ELUCENIA technical documentation · heart-score · ja · no clinical/professional/rights approval -->
+
+# HEARTスコア
+
+[条件・出典・許諾](https://elucenia.org/ja/tools/heart-score)
+
+## 使い方
+
+ポータルでツールを使用するか、ローカルHTTPサーバー経由でindex.htmlを開いてください。言語を選択し、項目を入力して計算してください。
+
+## 入力項目と単位
+
+### 病歴
+
+`h`
+
+- `0` — 疑いが低い
+- `1` — 中等度の疑い
+- `2` — 疑いが高い
+
+### ECG
+
+`e`
+
+- `0` — 正常
+- `1` — 非特異的な再分極変化
+- `2` — 有意なST低下
+
+### 年齢
+
+`a`
+
+- `0` — ≤ 45歳
+- `1` — \> 45歳かつ \< 65歳
+- `2` — ≥ 65 歳
+
+### 危険因子
+
+`r`
+
+- `0` — なし
+- `1` — 1または2
+- `2` — ≥3または既知の動脈硬化性疾患
+
+### トロポニン
+
+`t`
+
+- `0` — ≤正常上限
+- `1` — \> 正常上限の1倍かつ \< 3倍
+- `2` — ≥ 正常上限の3倍
+
+## 方法の版
+
+HEART/Backus 2013：5項目を各0–2点で評価し、合計0–10点。年齢は≤45歳、\>45歳かつ\<65歳、≥65歳。トロポニンは≤正常上限、\>正常上限の1倍かつ\<3倍、≥正常上限の3倍。連続評価を行うHEART Pathwayとは異なる
+
+## 記載された計算式
+
+各項目0～2点：H病歴，E心電図，A年齢，R危険因子，Tトロポニン。合計0～10。
+
+危険因子：高血圧，脂質異常症，糖尿病，肥満（BMI\>30），現在または最近の喫煙，早発冠動脈疾患の家族歴。
+
+## 限界・対象集団
+
+元のHEARTスコアは、救急で胸痛があり、ST上昇を伴わない急性冠症候群が疑われた人で研究されました。低スコアはリスクがゼロであることを意味せず、元の合計は連続評価を行うHEART Pathwayと同等ではありません。退院の安全性、トロポニン測定の時点、除外条件には、対応するプロトコルが必要です。
+
+## 参考文献
+
+- [Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J, 2008.](https://doi.org/10.1007/BF03086144)
+
+- [Backus BE et al. A prospective validation of the HEART score for chest pain patients at the emergency department. Int J Cardiol, 2013.](https://doi.org/10.1016/j.ijcard.2013.01.255)
+
+## 技術テストの再現
+
+このリポジトリのルートディレクトリでnode test.cjsを実行すると、記録された合成ケースを再実行できます。元の入力、期待結果、許容誤差は保持されています。技術テストは臨床的検証を意味しません。
+
+```sh
+node test.cjs
+```
+
+tool.jsonには出典、版、確認範囲が記録されています。examples.jsonには合成入力と期待結果が保持され、results.jsonには実際に得られた結果が記録されています。
+
+[記録・参考文献](../tool.json) · [JavaScriptコード](../calculator.js) · [参照ケース](../examples.json) · [results.json](../results.json)
+
+## 確認状況と使用条件
+
+独立した臨床レビューは実施されていません。
+
+このインターフェースは独自に作成した翻訳であり、公式版や認証済みの版ではありません。独立した臨床レビュー、専門家による言語レビュー、評価尺度等の権利許諾の確認は実施されていません。
+
+式または分類の結果です。解釈、対応、適用可能性は専門家による評価と選択した出典に依存します。
+
+## ライセンスと帰属表示
+
+Apache-2.0はELUCENIAのコードにのみ適用されます。評価尺度等、出版物、翻訳、データの権利は、それぞれの権利者に帰属します。LICENSEとNOTICEを保持してください。
+
+ELUCENIA · Felipe Guedes · Copyright © 2026

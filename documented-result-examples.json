@@ -1,0 +1,888 @@
+{
+  "id": "heart-score",
+  "implementationVersion": "heart-score@native-2026-10-05+f44e320b6c05",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE em 6 semanas",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "50,1%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Alto risco: Estratégia invasiva precoce",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE em 6 semanas",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "1,7%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Baixo risco: Considerar alta com troponinas seriadas negativas e seguimento ambulatorial",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE em 6 semanas",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "16,6%",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risco moderado: Observação, troponina seriada e investigação não invasiva",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE in 6 weeks",
+                "locale": "en",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50.1%",
+                "locale": "en",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "High risk: Early invasive strategy",
+            "locale": "en",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE in 6 weeks",
+                "locale": "en",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1.7%",
+                "locale": "en",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Low risk: Consider discharge with negative serial troponins and outpatient follow-up",
+            "locale": "en",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE in 6 weeks",
+                "locale": "en",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16.6%",
+                "locale": "en",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Moderate risk: Observation, serial troponin and noninvasive investigation",
+            "locale": "en",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE a 6 semanas",
+                "locale": "es",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50,1%",
+                "locale": "es",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Alto riesgo: estrategia invasiva precoz",
+            "locale": "es",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE a 6 semanas",
+                "locale": "es",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1,7%",
+                "locale": "es",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Bajo riesgo: considerar el alta con troponinas seriadas negativas y seguimiento ambulatorio",
+            "locale": "es",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE a 6 semanas",
+                "locale": "es",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16,6%",
+                "locale": "es",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Riesgo moderado: observación, troponina seriada e investigación no invasiva",
+            "locale": "es",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE à 6 semaines",
+                "locale": "fr",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50,1%",
+                "locale": "fr",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque élevé : stratégie invasive précoce",
+            "locale": "fr",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE à 6 semaines",
+                "locale": "fr",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1,7%",
+                "locale": "fr",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Faible risque : envisager la sortie avec des troponines sériées négatives et un suivi ambulatoire",
+            "locale": "fr",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE à 6 semaines",
+                "locale": "fr",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16,6%",
+                "locale": "fr",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Risque modéré : observation, troponine sériée et exploration non invasive",
+            "locale": "fr",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE in 6 Wochen",
+                "locale": "de",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50,1%",
+                "locale": "de",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hohes Risiko: frühe invasive Strategie",
+            "locale": "de",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE in 6 Wochen",
+                "locale": "de",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1,7%",
+                "locale": "de",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Niedriges Risiko: Entlassung bei negativen seriellen Troponinen und ambulanter Nachsorge erwägen",
+            "locale": "de",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE in 6 Wochen",
+                "locale": "de",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16,6%",
+                "locale": "de",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Moderates Risiko: Beobachtung, serielle Troponinbestimmung und nichtinvasive Abklärung",
+            "locale": "de",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE a 6 settimane",
+                "locale": "it",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50,1%",
+                "locale": "it",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio alto: strategia invasiva precoce",
+            "locale": "it",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE a 6 settimane",
+                "locale": "it",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1,7%",
+                "locale": "it",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Basso rischio: considerare la dimissione con troponine seriali negative e follow-up ambulatoriale",
+            "locale": "it",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "MACE a 6 settimane",
+                "locale": "it",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16,6%",
+                "locale": "it",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rischio moderato: osservazione, troponina seriale e indagine non invasiva",
+            "locale": "it",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الحدث القلبي الوعائي الرئيسي (MACE) خلال 6 أسابيع",
+                "locale": "ar",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "٥٠٫١%",
+                "locale": "ar",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطورة عالية: استراتيجية تداخلية مبكرة",
+            "locale": "ar",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الحدث القلبي الوعائي الرئيسي (MACE) خلال 6 أسابيع",
+                "locale": "ar",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "١٫٧%",
+                "locale": "ar",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطورة منخفضة: فكّر في الخروج مع سلبية التروبونينات المتسلسلة والمتابعة الخارجية",
+            "locale": "ar",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "الحدث القلبي الوعائي الرئيسي (MACE) خلال 6 أسابيع",
+                "locale": "ar",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "١٦٫٦%",
+                "locale": "ar",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خطورة متوسطة: المراقبة، التروبونين المتسلسل، والاستقصاء غير الباضع",
+            "locale": "ar",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6周内MACE",
+                "locale": "zh",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50.1%",
+                "locale": "zh",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "高风险：早期侵入性策略",
+            "locale": "zh",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6周内MACE",
+                "locale": "zh",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1.7%",
+                "locale": "zh",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低风险：可考虑在连续肌钙蛋白阴性及门诊随访下出院",
+            "locale": "zh",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6周内MACE",
+                "locale": "zh",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16.6%",
+                "locale": "zh",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "中等风险：观察、连续肌钙蛋白检测和无创检查",
+            "locale": "zh",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6週間のMACE",
+                "locale": "ja",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50.1%",
+                "locale": "ja",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "高リスク：早期侵襲的戦略",
+            "locale": "ja",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6週間のMACE",
+                "locale": "ja",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1.7%",
+                "locale": "ja",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低リスク：連続トロポニン陰性および外来フォローアップで退院を考慮する",
+            "locale": "ja",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6週間のMACE",
+                "locale": "ja",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16.6%",
+                "locale": "ja",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "中等リスク：経過観察、連続トロポニン測定および非侵襲的検査",
+            "locale": "ja",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6 सप्ताह में MACE",
+                "locale": "hi",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "50.1%",
+                "locale": "hi",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  50.1
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "उच्च जोखिम: प्रारंभिक इनवेसिव रणनीति",
+            "locale": "hi",
+            "template": "documented-authored-834d94542620be9c42aa"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6 सप्ताह में MACE",
+                "locale": "hi",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "1.7%",
+                "locale": "hi",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  1.7
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "कम जोखिम: क्रमिक ट्रोपोनिन नकारात्मक होने पर डिस्चार्ज पर विचार करें और बाह्य रोगी अनुवर्ती करें",
+            "locale": "hi",
+            "template": "documented-authored-5e0820dfe5ab0662de14"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "6 सप्ताह में MACE",
+                "locale": "hi",
+                "template": "documented-authored-e65015118f0824e0ed9c"
+              },
+              "value": {
+                "text": "16.6%",
+                "locale": "hi",
+                "template": "documented-authored-e55a0086c021037f4f60",
+                "sourceNumbers": [
+                  16.6
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "मध्यम जोखिम: अवलोकन, क्रमिक ट्रोपोनिन और गैर-आक्रामक जाँच",
+            "locale": "hi",
+            "template": "documented-authored-a1301104317d32c2c658"
+          },
+          "level": "mid"
+        }
+      }
+    ]
+  }
+}

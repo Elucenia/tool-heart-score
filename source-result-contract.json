@@ -1,0 +1,196 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "heart-score",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "523f6ed0358d1b384671befbb6b52bb61c548cbf",
+    "oldEngineSha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3",
+    "currentEngineSha256": "f44e320b6c0572b3939a8724a76833d192f56f862fe67ada0d86e857cfdfbcd6"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "H2 E2 A2 R2 T2: 10 pontos (alto risco)",
+      "input": {
+        "h": "2",
+        "e": "2",
+        "a": "2",
+        "r": "2",
+        "t": "2"
+      },
+      "publicOutput": {
+        "id": "heart-score",
+        "main": [
+          "10",
+          "pontos"
+        ],
+        "label": "Escore HEART",
+        "raw": {
+          "score": 10
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 10
+        },
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "10",
+          "pontos"
+        ],
+        "label": "Escore HEART",
+        "level": "high",
+        "verdict": "Alto risco: Estratégia invasiva precoce",
+        "rows": [
+          [
+            "MACE em 6 semanas",
+            "50,1%"
+          ]
+        ],
+        "raw": {
+          "score": 10
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "H1 E1 A1 R0 T0: 3 pontos (baixo risco)",
+      "input": {
+        "h": "1",
+        "e": "1",
+        "a": "1",
+        "r": "0",
+        "t": "0"
+      },
+      "publicOutput": {
+        "id": "heart-score",
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "Escore HEART",
+        "raw": {
+          "score": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 3
+        },
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "Escore HEART",
+        "level": "low",
+        "verdict": "Baixo risco: Considerar alta com troponinas seriadas negativas e seguimento ambulatorial",
+        "rows": [
+          [
+            "MACE em 6 semanas",
+            "1,7%"
+          ]
+        ],
+        "raw": {
+          "score": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "H2 E1 A1 R1 T0: 5 pontos (moderado)",
+      "input": {
+        "h": "2",
+        "e": "1",
+        "a": "1",
+        "r": "1",
+        "t": "0"
+      },
+      "publicOutput": {
+        "id": "heart-score",
+        "main": [
+          "5",
+          "pontos"
+        ],
+        "label": "Escore HEART",
+        "raw": {
+          "score": 5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 5
+        },
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "5",
+          "pontos"
+        ],
+        "label": "Escore HEART",
+        "level": "mid",
+        "verdict": "Risco moderado: Observação, troponina seriada e investigação não invasiva",
+        "rows": [
+          [
+            "MACE em 6 semanas",
+            "16,6%"
+          ]
+        ],
+        "raw": {
+          "score": 5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "rows"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "rows"
+      ]
+    }
+  ]
+}

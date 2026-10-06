@@ -95,3 +95,34 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+High risk: Early invasive strategy
+
+| Result details | |
+| --- | --- |
+| MACE in 6 weeks | 50.1% |
+
+
+### 2
+
+Low risk: Consider discharge with negative serial troponins and outpatient follow-up
+
+| Result details | |
+| --- | --- |
+| MACE in 6 weeks | 1.7% |
+
+
+### 3
+
+Moderate risk: Observation, serial troponin and noninvasive investigation
+
+| Result details | |
+| --- | --- |
+| MACE in 6 weeks | 16.6% |
+

@@ -339,7 +339,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "HEART/Backus 2013: 5 componentes de 0–2 pontos, total 0–10; idade ≤45, >45 e <65, ≥65 anos; troponina ≤LSN, >1×LSN e <3×LSN, ≥3×LSN; sem HEART Pathway seriado",
-    "implementationVersion": "heart-score@native-2026-10-04+0302007791db",
+    "implementationVersion": "heart-score@native-2026-10-05+f44e320b6c05",
     "currentMethodSource": "https://doi.org/10.1016/j.ijcard.2013.01.255",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -656,7 +656,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3",
+      "implementationHash": "f44e320b6c0572b3939a8724a76833d192f56f862fe67ada0d86e857cfdfbcd6",
       "previousInputContract": {
         "fields": [
           {
@@ -738,7 +738,35 @@
         "scope": "Only four displayed age/troponin option brackets and chosen edition; executable point calculation unchanged.",
         "previousImplementationHash": "f39832400d3be6f1d021f4d48a6ffa0f707ee60fe8f28a55ab6d25ffd2bfcac7",
         "calculationTextSha256": "eed1584fcba2e8dba7f6002653263b5079bbe22edf2a8e0102caf662ea59e1f0"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "heart-score@native-2026-10-04+0302007791db",
+          "previousImplementationHash": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3",
+          "implementationHash": "f44e320b6c0572b3939a8724a76833d192f56f862fe67ada0d86e857cfdfbcd6",
+          "scientificBodySha256": "2e594e4dad96b89ddaf510669c86e05f003d6d6af86f7ed8563eeb3af9b1e3a6",
+          "metadataContractHash": "e804a71efb3fb778573f4ea3edff8bd876b1b6c2385318fc43cc839f82026708",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O HEART original foi estudado na emergência em pessoas com dor torácica e suspeita de síndrome coronariana sem supradesnível. Baixo escore não significa risco zero, e a soma original não é equivalente ao HEART Pathway com avaliação seriada. Segurança de alta, momento das troponinas e exclusões exigem o protocolo correspondente.",
     "sourceLimitEvidence": {
@@ -758,20 +786,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/heart-score/calculator.js",
-    "bytes": 5198,
-    "sha256": "0302007791dbc421037d2b3a156e1d543312f1b5c626f970fc5df140a27393b3"
+    "bytes": 5403,
+    "sha256": "f44e320b6c0572b3939a8724a76833d192f56f862fe67ada0d86e857cfdfbcd6"
   },
-  "sourceToolSha256": "7aa3a9548e33f2ac21c837f9a73622323bbd687f3ae41549b2c5117fb5a28306",
+  "sourceToolSha256": "61f4253a78b47b363f12f76f829a99fb43edb2f544594a2f3e58511799727fe2",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "f17383423e89ce55d874ec684c496ac40b02d30a994b0cfcc97870a273763f5a",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "f17383423e89ce55d874ec684c496ac40b02d30a994b0cfcc97870a273763f5a",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

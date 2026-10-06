@@ -95,3 +95,34 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Risque élevé : stratégie invasive précoce
+
+| Détails du résultat | |
+| --- | --- |
+| MACE à 6 semaines | 50,1% |
+
+
+### 2
+
+Faible risque : envisager la sortie avec des troponines sériées négatives et un suivi ambulatoire
+
+| Détails du résultat | |
+| --- | --- |
+| MACE à 6 semaines | 1,7% |
+
+
+### 3
+
+Risque modéré : observation, troponine sériée et exploration non invasive
+
+| Détails du résultat | |
+| --- | --- |
+| MACE à 6 semaines | 16,6% |
+

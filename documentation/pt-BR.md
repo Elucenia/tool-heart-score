@@ -95,3 +95,34 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Alto risco: Estratégia invasiva precoce
+
+| Detalhes do resultado | |
+| --- | --- |
+| MACE em 6 semanas | 50,1% |
+
+
+### 2
+
+Baixo risco: Considerar alta com troponinas seriadas negativas e seguimento ambulatorial
+
+| Detalhes do resultado | |
+| --- | --- |
+| MACE em 6 semanas | 1,7% |
+
+
+### 3
+
+Risco moderado: Observação, troponina seriada e investigação não invasiva
+
+| Detalhes do resultado | |
+| --- | --- |
+| MACE em 6 semanas | 16,6% |
+
